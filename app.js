@@ -1,33 +1,17 @@
-const button = document.querySelector(".hello");
-console.log(button);
 
-function handleClick(){
-    button.style.color ="aqua";
+function changeColors() {
+    const width = window.innerWidth;
+    if(width <= 450) {
+        document.body.style.backgroundColor = "tomato";
+    } else if (width > 450 && width <= 500) {
+        document.body.style.backgroundColor = "aqua";
+    } else if (width > 500 && width <= 600) {
+        document.body.style.backgroundColor = "blue";
+    } else {
+        document.body.style.backgroundColor = "pink";
+    }
 }
 
-button.addEventListener("click", handleClick);
 
+window.addEventListener("resize", changeColors);
 
-const h1 =document.querySelector("h1");
-console.dir(h1);
-
-
-function handleh2 () {
-   if(h1.innerText === "저는 사람입니다") {
-       h1.innerText = "아뉜데용~?"
-   } else {
-       h1.innerText = "아뉘라구요 ㅋㅋ"
-   }
-};
-h1.addEventListener("mousewheel", handleh2) ;
-
-
-
-const h4 = document.querySelector(".I")
-console.log(h4);
-
-function hadleMouseLeave() {
-    h4.innerText = "ㅇㅈ~" ;
-};
-
-h4.addEventListener("mouseleave", hadleMouseLeave);
