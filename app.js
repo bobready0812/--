@@ -1,17 +1,16 @@
+const loginInput = document.querySelector("#login-form input");
+const loginButton = document.querySelector("#login-form button");
 
-function changeColors() {
-    const width = window.innerWidth;
-    if(width <= 450) {
-        document.body.style.backgroundColor = "tomato";
-    } else if (width > 450 && width <= 500) {
-        document.body.style.backgroundColor = "aqua";
-    } else if (width > 500 && width <= 600) {
-        document.body.style.backgroundColor = "blue";
-    } else {
-        document.body.style.backgroundColor = "pink";
-    }
+
+function onLoginButton() {
+   const username = loginInput.value;
+if(username === "") {
+    alert("이름을 적어주세요");
+} else if (username.length > 15) {
+    alert ("이름이 너무 깁니다");
+}
 }
 
 
-window.addEventListener("resize", changeColors);
 
+loginButton.addEventListener("click", onLoginButton);
