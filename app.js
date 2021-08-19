@@ -1,16 +1,15 @@
+const loginForm = document.querySelector("#login-form");
 const loginInput = document.querySelector("#login-form input");
-const loginButton = document.querySelector("#login-form button");
+const link = document.querySelector("a");
 
-
-function onLoginButton() {
-   const username = loginInput.value;
-if(username === "") {
-    alert("이름을 적어주세요");
-} else if (username.length > 15) {
-    alert ("이름이 너무 깁니다");
-}
+function onLoginSubmit(aa) {
+    aa.preventDefault();
+    console.log(loginInput.value);
 }
 
+function handleClicked(event) {
+    event.preventDefault();
+}
 
-
-loginButton.addEventListener("click", onLoginButton);
+loginForm.addEventListener("submit", onLoginSubmit);
+link.addEventListener("click", handleClicked);
