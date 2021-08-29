@@ -56,7 +56,7 @@ function innerText3 () {
         chat_box3.innerText ="";
     }
     count++;
-    count4++
+    coun4++;
 }
 
 function changeColor4 () { 
