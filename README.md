@@ -1,2 +1,2 @@
 # review
-Js review 중
+Js review
